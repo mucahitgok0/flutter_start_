@@ -1,4 +1,4 @@
-import 'package:flutter_dersleri/nesne_tabanli_programlama/araba.dart';
+import 'package:flutter_dersleri/dart_dersleri/nesne_tabanli_programlama/araba.dart';
 
 void main(){
   var tofas = Araba(renk: "beyaz", hiz: 10, calisiyorMu: false);

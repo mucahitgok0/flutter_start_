@@ -1,4 +1,4 @@
-import 'package:flutter_dersleri/nesne_tabanli_programlama/fonksiyonlar.dart';
+import 'package:flutter_dersleri/dart_dersleri/nesne_tabanli_programlama/fonksiyonlar.dart';
 
 void main(){
   var meeting = Fonksiyonlar();

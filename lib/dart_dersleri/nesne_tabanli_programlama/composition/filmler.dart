@@ -1,4 +1,4 @@
-import 'package:flutter_dersleri/nesne_tabanli_programlama/composition/yonetmenler.dart';
+import 'package:flutter_dersleri/dart_dersleri/nesne_tabanli_programlama/composition/yonetmenler.dart';
 import 'kategoriler.dart';
 
 class Filmler{

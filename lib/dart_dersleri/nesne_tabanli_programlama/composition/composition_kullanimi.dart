@@ -1,6 +1,7 @@
-import 'package:flutter_dersleri/nesne_tabanli_programlama/composition/filmler.dart';
-import 'package:flutter_dersleri/nesne_tabanli_programlama/composition/yonetmenler.dart';
+import 'package:flutter_dersleri/dart_dersleri/nesne_tabanli_programlama/composition/yonetmenler.dart';
+import 'package:flutter_dersleri/dart_dersleri/nesne_tabanli_programlama/composition/filmler.dart';
 
+import 'filmler.dart';
 import 'kategoriler.dart';
 
 void main(){
