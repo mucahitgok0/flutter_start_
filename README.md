@@ -1,16 +1,4 @@
-# flutter_dersleri
 
-A new Flutter project.
+![image](https://github.com/mucahitgok0/flutter_start_/assets/136997167/98e395cf-7c42-4662-9de8-251f07c85fcd)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/mucahitgok0/flutter_start_/assets/136997167/7c29e73f-b8a4-4b91-83a7-81618f697327)
