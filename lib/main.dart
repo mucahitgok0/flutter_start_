@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dersleri/flutter_dersleri/anasayfa.dart';
+import 'package:flutter_dersleri/flutter_dersleri/food_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Anasayfa(),
+      home: const AppDesign(),
     );
   }
 }
