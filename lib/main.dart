@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dersleri/flutter_dersleri/anasayfa.dart';
-import 'package:flutter_dersleri/flutter_dersleri/food_app.dart';
+import 'package:flutter_dersleri/flutter_dersleri/pizza_anasayfa.dart';
+import 'package:flutter_dersleri/sayac.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AppDesign(),
+      home: const Sayac(),
     );
   }
 }
