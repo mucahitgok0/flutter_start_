@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dersleri/kisiler.dart';
-import 'package:flutter_dersleri/sonuc_ekrani.dart';
+import 'package:flutter_dersleri/sayfaGecis_sayac/kisiler.dart';
+import 'package:flutter_dersleri/sayfaGecis_sayac/sonuc_ekrani.dart';
 
 class OyunEkrani extends StatefulWidget {
   Kisiler kisi;

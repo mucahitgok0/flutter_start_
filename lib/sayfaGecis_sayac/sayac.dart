@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dersleri/kisiler.dart';
-import 'package:flutter_dersleri/oyun_ekrani.dart';
+import 'package:flutter_dersleri/sayfaGecis_sayac/kisiler.dart';
+import 'package:flutter_dersleri/sayfaGecis_sayac/oyun_ekrani.dart';
 
 class Sayac extends StatefulWidget {
   const Sayac({Key? key}) : super(key: key);

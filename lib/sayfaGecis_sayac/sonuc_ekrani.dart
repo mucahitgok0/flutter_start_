@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dersleri/oyun_ekrani.dart';
-import 'package:flutter_dersleri/sayac.dart';
+import 'package:flutter_dersleri/sayfaGecis_sayac/oyun_ekrani.dart';
+import 'package:flutter_dersleri/sayfaGecis_sayac/sayac.dart';
 
 class SonucEkrani extends StatefulWidget {
   const SonucEkrani({Key? key}) : super(key: key);
