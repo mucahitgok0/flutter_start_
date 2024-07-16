@@ -3,7 +3,7 @@ import 'package:flutter_dersleri/kisiler_uygulamasi/data/entity/kisiler.dart';
 import 'package:flutter_dersleri/kisiler_uygulamasi/ui/views/detay_sayfa.dart';
 import 'package:flutter_dersleri/kisiler_uygulamasi/ui/views/kayit_sayfa.dart';
 
-import 'detay_sayfa.dart';
+
 
 class Anasyfa extends StatefulWidget {
   const Anasyfa({Key? key}) : super(key: key);
@@ -28,6 +28,10 @@ class _AnasyfaState extends State<Anasyfa> {
     kisilerListesi.add(k2);
     kisilerListesi.add(k3);
     return kisilerListesi;
+  }
+
+  Future <void> sil (int kisi_id) async{
+    print("Kişi Sil: ${kisi_id}");
   }
 
   @override
@@ -56,7 +60,63 @@ class _AnasyfaState extends State<Anasyfa> {
         ],
 
       ),
-
+      body: FutureBuilder<List<Kisiler>>(
+        future: kisileriYukle(),
+        builder: (context, snapshots){
+          if(snapshots.hasData){
+            var kisilerListesi = snapshots.data;
+            return ListView.builder(
+              itemCount: kisilerListesi!.length,
+              itemBuilder:(context, indeks){
+                var kisi = kisilerListesi[indeks];
+                return GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => DetaySayfa(kisi: kisi)))
+                        .then((value){
+                      print("Detay sayfaya dönüldü");
+                    });
+                  },
+                  child: Card(
+                    child: SizedBox(height: 100,
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(kisi.kisi_ad,style: const TextStyle(fontSize: 20),),
+                                Text(kisi.kisi_tel),
+                              ],
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(onPressed: (){
+                            setState(() {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text("${kisi.kisi_ad} silinsin mi?"),
+                                  action: SnackBarAction(label: "Evet", 
+                                      onPressed: (){
+                                    sil(kisi.kisi_id);
+                                      }
+                                  ),
+                                  ));
+                            });
+                          }, icon: Icon(Icons.clear),color: Colors.black54,)
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+            );
+          }
+          else{
+            return const Center();
+          }
+        },
+      ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: (){
