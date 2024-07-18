@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/entity/kisiler.dart';
 import '../../data/repo/kisilerdao_repository.dart';
@@ -7,19 +8,44 @@ class AnasayfaCubit extends Cubit<List<Kisiler>>{
 
   var krepo = KisilerDaoRepository();
 
-  Future <void> sil (String kisi_id) async{
-    await krepo.sil(kisi_id);
-    await krepo.kisileriYukle();
-  }
+  var collectionKisiler = FirebaseFirestore.instance.collection("Kisiler");
 
   Future<void> kisileriYukle() async{
-    var liste = await krepo.kisileriYukle();
-    emit(liste);
+    collectionKisiler.snapshots().listen((event) {
+      var kisilerListesi = <Kisiler>[];
+
+      var documents = event.docs;
+      for(var document in documents){
+        var key = document.id;
+        var data = document.data();
+        var kisi = Kisiler.formJson(data, key);
+        kisilerListesi.add(kisi);
+      }
+
+      emit(kisilerListesi);
+    });
   }
 
   Future<void> ara(String aramaKelimesi) async{
-    var liste = await krepo.ara(aramaKelimesi);
-    emit(liste);
+      collectionKisiler.snapshots().listen((event) {
+        var kisilerListesi = <Kisiler>[];
+
+        var documents = event.docs;
+        for(var document in documents){
+          var key = document.id;
+          var data = document.data();
+          var kisi = Kisiler.formJson(data, key);
+          if(kisi.kisi_ad.toLowerCase().contains(aramaKelimesi.toLowerCase())){
+            kisilerListesi.add(kisi);
+          }
+        }
+        emit(kisilerListesi);
+      });
+    }
+
+
+  Future <void> sil (String kisi_id) async{
+    await krepo.sil(kisi_id);
   }
 
 }
