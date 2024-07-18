@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dersleri/kisiler_uygulamasi/data/entity/kisiler.dart';
+import 'package:flutter_dersleri/kisiler_uygulamasi/ui/cubit/detay_sayfa_cubit.dart';
 
 class DetaySayfa extends StatefulWidget {
   Kisiler kisi;
@@ -12,9 +14,6 @@ class DetaySayfa extends StatefulWidget {
 class _DetaySayfaState extends State<DetaySayfa> {
   var tfKisiAdi = TextEditingController();
   var tfKisiTel = TextEditingController();
-  Future<void> guncelle(int kisi_id, String kisi_ad, String kisi_tel) async{
-    print("Kişi Id: ${kisi_id} - Kişi Adı: ${kisi_ad} - Kişi Tel: ${kisi_tel}");
-  }
   @override
   void initState() {
     super.initState();
@@ -42,7 +41,7 @@ class _DetaySayfaState extends State<DetaySayfa> {
               ),
             ),
             ElevatedButton(onPressed: (){
-              guncelle(widget.kisi.kisi_id, tfKisiAdi.text, tfKisiTel.text);
+              context.read<DetaySayfaCubit>().guncelle(widget.kisi.kisi_id, tfKisiAdi.text, tfKisiTel.text);
             },
                 child: Text("GÜNCELLE")),
           ],

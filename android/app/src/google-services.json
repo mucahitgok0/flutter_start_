@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "285042310202",
+    "project_id": "egitim-6bb02",
+    "storage_bucket": "egitim-6bb02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285042310202:android:d65905e9d8cfa81bda4903",
+        "android_client_info": {
+          "package_name": "com.example.flutter_dersleri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_fX-TVANUtLYYCzJOO2wqIKB_Sf7DbdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
