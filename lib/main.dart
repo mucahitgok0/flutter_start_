@@ -9,6 +9,7 @@ import 'package:flutter_dersleri/kisiler_uygulamasi/ui/cubit/kayit_sayfa_cubit.d
 import 'package:flutter_dersleri/kisiler_uygulamasi/ui/views/detay_sayfa.dart';
 import 'package:flutter_dersleri/sayfaGecis_sayac/sayac.dart';
 import 'package:flutter_dersleri/kullanici_etkilesimi/kullanici_etkilesimi_sayfa.dart';
+import 'package:flutter_dersleri/sp_kullanimi/home_page.dart';
 import 'package:flutter_dersleri/widget_kullanimi/anasayfa.dart';
 import 'package:flutter_dersleri/kisiler_uygulamasi/ui/views/anasayfa.dart';
 void main() async{
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const Anasyfa(),
+        home: const HomePage(),
       ),
     );
   }
