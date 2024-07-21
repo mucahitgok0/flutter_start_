@@ -31,6 +31,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  geolocator:
+  flutter_local_notifications:
   shared_preferences:
   flutter_bloc:
   firebase_core:

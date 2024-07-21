@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dersleri/bildirim_konum_kullanimi/bildirim_kullanimi.dart';
+import 'package:flutter_dersleri/bildirim_konum_kullanimi/konum_kullanimi.dart';
 import 'package:flutter_dersleri/bottom_nav_kullanimi/bottom_nav_sayfa.dart';
 import 'package:flutter_dersleri/flutter_dersleri/pizza_anasayfa.dart';
 import 'package:flutter_dersleri/kisiler_uygulamasi/ui/cubit/anasayfa_cubit.dart';
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const HomePage(),
+        home: const Konum(),
       ),
     );
   }
