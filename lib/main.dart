@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dersleri/bildirim_konum_kullanimi/bildirim_kullanimi.dart';
 import 'package:flutter_dersleri/bildirim_konum_kullanimi/konum_kullanimi.dart';
 import 'package:flutter_dersleri/bottom_nav_kullanimi/bottom_nav_sayfa.dart';
+import 'package:flutter_dersleri/filmler_uygulamasi/ui/cubit/anasayfa_cubit.dart';
+import 'package:flutter_dersleri/filmler_uygulamasi/ui/views/homepagee.dart';
 import 'package:flutter_dersleri/flutter_dersleri/pizza_anasayfa.dart';
 import 'package:flutter_dersleri/kisiler_uygulamasi/ui/cubit/anasayfa_cubit.dart';
 import 'package:flutter_dersleri/kisiler_uygulamasi/ui/cubit/detay_sayfa_cubit.dart';
@@ -32,6 +34,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => KayitSayfaCubit()),
         BlocProvider(create: (context) => DetaySayfaCubit()),
         BlocProvider(create: (context) => AnasayfaCubit()),
+        BlocProvider(create: (context) => HomePageCubit()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const Anasayfaaa(),
+        home: const HomePagee(),
       ),
     );
   }
